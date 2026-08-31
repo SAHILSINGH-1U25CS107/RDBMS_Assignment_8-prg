@@ -1,15 +1,9 @@
--- Employee Aggregate Functions Assignment
-
--- Step 1: Create Employee table
-
 CREATE TABLE Employee (
     EmployeeID INT PRIMARY KEY,
     EmployeeName VARCHAR(50),
     Department VARCHAR(30),
     Salary INT
 );
-
--- Step 2: Insert the following records
 
 INSERT INTO Employee (EmployeeID, EmployeeName, Department, Salary)
 VALUES
@@ -19,21 +13,14 @@ VALUES
 (104, 'Suresh', 'IT', 45000),
 (105, 'Latha', 'HR', 30000);
 
+SELECT COUNT(Salary) AS TotalEmployees
+FROM Employee;
 
--- Step 3: Write queries using COUNT(), MAX(), MIN()
--- and AVG() on the Salary field.
+SELECT MAX(Salary) AS MaximumSalary
+FROM Employee;
 
--- COUNT()
--- Write your query below:
+SELECT MIN(Salary) AS MinimumSalary
+FROM Employee;
 
-
--- MAX()
--- Write your query below:
-
-
--- MIN()
--- Write your query below:
-
-
--- AVG()
--- Write your query below:
+SELECT AVG(Salary) AS AverageSalary
+FROM Employee;
